@@ -441,9 +441,9 @@
     <tr>
       <th data-col="codigo">Código</th>
       <th data-col="descripcion">Descripción</th>
+      <th data-col="precio">Precio</th>
       <th data-col="tipo">Tipo</th>
       <th data-col="marcas">Marca</th>
-      <th data-col="precio">Precio</th>
     </tr>
   </thead>
   <tbody id="cuerpoTabla"></tbody>
@@ -632,9 +632,9 @@ function render(listaCompleta) {
     tr.innerHTML = `
       <td class="codigo">${p.codigo}</td>
       <td class="desc">${p.descripcion}</td>
+      <td class="precio precio-celda">${formatoPrecio(p)}</td>
       <td class="tipo">${p.tipo}</td>
       <td class="marca">${marcasHtml}</td>
-      <td class="precio precio-celda">${formatoPrecio(p)}</td>
     `;
     const filaId = 'fila-' + idx;
     tr.addEventListener('click', () => toggleDetalle(filaId));
